@@ -9,7 +9,7 @@
   <items>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
-            <ImageView fitHeight="312.0" fitWidth="598.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true"/>
+            <ImageView fx:id="imageView" fitHeight="312.0" fitWidth="598.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
 
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
