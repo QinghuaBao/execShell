@@ -17,7 +17,7 @@ public class Controller {
     }
 
     @FXML
-    private void handleButton(){
+    private void handleLink(){
         //warning("test11");
         //String privKey = "C:\\Users\\Administrator\\.ssh\\id_rsa";
         try {
