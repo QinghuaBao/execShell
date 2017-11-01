@@ -14,6 +14,7 @@
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
          <children>
+             <Button layoutX="290.0" layoutY="26.0" mnemonicParsing="false" onAction="#choosefile" text="选择文件" />
             <Button layoutX="371.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleUpload" text="上传" />
             <Button layoutX="519.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleUpdown" text="下载" />
             <Button layoutX="428.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleLink" text="连接服务器" />
