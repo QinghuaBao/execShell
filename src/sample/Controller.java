@@ -46,10 +46,10 @@ public class Controller {
 //        }
         //ExecCmdOnLinux();
         JschCommand jschCommand = new JschCommand();
-        //jschCommand.executeCommand("/home/linsong/anaconda2/bin/python  /home/linsong/py-faster-rcnn/tools/demo.py");
-        //jschCommand.executeCommand("bash /home/linsong/test.sh");
+        //jschCommand.executeCommand("/home/linsong/anaconda2/bin/python2.7  /home/linsong/test.py");
+        jschCommand.executeCommand("bash /home/linsong/test.sh");
 
-        jschCommand.executeCommand("sh /home/linsong/test.sh");
+        //jschCommand.executeCommand("sh /home/linsong/test.sh");
      //   jschCommand.executeCommand("ls");
     }
     @FXML
