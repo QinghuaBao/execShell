@@ -6,7 +6,7 @@ import com.jcraft.jsch.SftpATTRS;
 import com.jcraft.jsch.SftpException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
+import javafx.scene.control.*;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -19,6 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 
@@ -31,15 +32,22 @@ public class Controller {
 
     @FXML
     private void initialize(){
-        try {
-            BufferedImage image = ImageIO.read(new File("下载.jpg"));
-            image = resize(image, (int)imageView.getFitWidth(), (int)imageView.getFitHeight());
-            //ImageIo.write函数保存，再重新读出来
-            imageView.setImage(new Image(new FileInputStream("新文件")));
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
+        //javafx.scene.control.ScrollPane scrollPane = new ScrollPane();
+        Image image = new Image("file:下载.jpg");
+        setImage(image);
+        //imageView.setPreserveRatio(true);
+//        imageView.setImage(image);
+//        imageView.setStyle("");
+//        imageView.setLayoutX(100);
+//        try {
+//            BufferedImage image = ImageIO.read(new File("下载.jpg"));
+//            image = resize(image, (int)imageView.getFitWidth(), (int)imageView.getFitHeight());
+//            //ImageIo.write函数保存，再重新读出来
+//            imageView.setImage(new Image(new FileInputStream("新文件")));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            return;
+//        }
     }
 
     @FXML
@@ -176,6 +184,19 @@ public class Controller {
         fname = file.getName();
         files = "file:" + fpath;
         Image image = new Image(files);
+        imageView.setImage(image);
+    }
+
+    private void setImage(Image image){
+        imageView.setFitHeight(image.getHeight());
+        imageView.setFitWidth(image.getWidth());
+        //598,366
+        if (image.getHeight() < 323){
+            imageView.setLayoutY((366-image.getHeight())/2);
+        }
+        if (image.getWidth() < 461){
+            imageView.setLayoutX((598-image.getWidth())/2);
+        }
         imageView.setImage(image);
     }
 

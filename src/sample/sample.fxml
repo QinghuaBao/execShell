@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <SplitPane dividerPositions="0.8065326633165829" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="459.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <items>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+    <AnchorPane depthTest="ENABLE" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
 
          <children>
-            <ImageView fx:id="imageView" fitHeight="312.0" fitWidth="598.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+            <ScrollPane fx:id="scrollPane" layoutX="384.0" layoutY="70.0" prefHeight="366.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <AnchorPane>
+                     <children>
+                        <ImageView fx:id="imageView" cache="true" fitHeight="323.0" fitWidth="461.0" layoutX="100.0" pickOnBounds="true" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
 
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
