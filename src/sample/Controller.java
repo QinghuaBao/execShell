@@ -33,7 +33,7 @@ public class Controller {
     @FXML
     private void initialize(){
         //javafx.scene.control.ScrollPane scrollPane = new ScrollPane();
-        Image image = new Image("file:下载.jpg");
+        Image image = new Image("file:100820.jpg");
         setImage(image);
         //imageView.setPreserveRatio(true);
 //        imageView.setImage(image);
@@ -191,11 +191,13 @@ public class Controller {
         imageView.setFitHeight(image.getHeight());
         imageView.setFitWidth(image.getWidth());
         //598,366
-        if (image.getHeight() < 323){
-            imageView.setLayoutY((366-image.getHeight())/2);
+        double height = imageView.getFitHeight();
+        double width = imageView.getFitWidth();
+        if (image.getHeight() < height){
+            imageView.setLayoutY((height-image.getHeight())/2);
         }
-        if (image.getWidth() < 461){
-            imageView.setLayoutX((598-image.getWidth())/2);
+        if (image.getWidth() < width){
+            imageView.setLayoutX((width-image.getWidth())/2);
         }
         imageView.setImage(image);
     }
