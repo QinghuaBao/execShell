@@ -6,28 +6,28 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<SplitPane dividerPositions="0.8065326633165829" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="459.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<SplitPane dividerPositions="0.8582375478927203" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="584.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
   <items>
-    <AnchorPane depthTest="ENABLE" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+    <AnchorPane depthTest="ENABLE" minHeight="0.0" minWidth="0.0" prefHeight="383.0" prefWidth="598.0">
 
          <children>
-            <ScrollPane fx:id="scrollPane" layoutX="384.0" layoutY="70.0" prefHeight="366.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <ScrollPane fx:id="scrollPane" layoutX="384.0" layoutY="-38.0" prefHeight="404.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-38.0">
                <content>
-                  <AnchorPane>
+                  <AnchorPane prefHeight="353.0" prefWidth="561.0">
                      <children>
-                        <ImageView fx:id="imageView" cache="true" fitHeight="323.0" fitWidth="461.0" layoutX="100.0" pickOnBounds="true" />
+                        <ImageView fx:id="imageView" cache="true" fitHeight="349.0" fitWidth="461.0" layoutX="100.0" layoutY="38.0" pickOnBounds="true" />
                      </children>
                   </AnchorPane>
                </content>
             </ScrollPane>
 
          </children></AnchorPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="47.0" prefWidth="598.0">
          <children>
              <Button layoutX="100.0" layoutY="26.0" mnemonicParsing="false" onAction="#choosefile" text="选择文件" />
             <Button layoutX="220.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleUpload" text="上传" />
-            <Button layoutX="320.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleUpdown" text="下载" />
-            <Button layoutX="420.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleLink" text="连接服务器" />
+             <Button layoutX="320.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleLink" text="检测" />
+            <Button layoutX="420.0" layoutY="26.0" mnemonicParsing="false" onAction="#handleUpdown" text="查看" />
          </children></AnchorPane>
   </items>
 </SplitPane>

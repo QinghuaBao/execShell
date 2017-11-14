@@ -184,7 +184,7 @@ public class Controller {
         fname = file.getName();
         files = "file:" + fpath;
         Image image = new Image(files);
-        imageView.setImage(image);
+        setImage(image);
     }
 
     private void setImage(Image image){
