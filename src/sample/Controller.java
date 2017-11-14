@@ -6,6 +6,7 @@ import com.jcraft.jsch.SftpATTRS;
 import com.jcraft.jsch.SftpException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.control.*;
 
 import javax.imageio.ImageIO;
@@ -22,6 +23,8 @@ import java.util.Map;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Screen;
 
 
 public class Controller {
@@ -29,12 +32,17 @@ public class Controller {
     private String fname;
     @FXML
     private ImageView imageView;
+    @FXML
+    private ScrollPane scrollPane;
+    @FXML
+    private AnchorPane anchorPane;
 
     @FXML
     private void initialize(){
+//        anchorPane.setStyle("-fx-background-position:center");
         //javafx.scene.control.ScrollPane scrollPane = new ScrollPane();
-        Image image = new Image("file:100820.jpg");
-        setImage(image);
+//        Image image = new Image("file:下载.jpg");
+//        setImage(image);
         //imageView.setPreserveRatio(true);
 //        imageView.setImage(image);
 //        imageView.setStyle("");
@@ -191,8 +199,12 @@ public class Controller {
         imageView.setFitHeight(image.getHeight());
         imageView.setFitWidth(image.getWidth());
         //598,366
-        double height = imageView.getFitHeight();
-        double width = imageView.getFitWidth();
+        Screen screen = Screen.getPrimary();
+        Rectangle2D bounds = screen.getVisualBounds();
+        double height = bounds.getHeight() -300;
+        double width = bounds.getWidth();
+//        double height = scrollPane.getPrefViewportHeight();
+//        double width = scrollPane;
         if (image.getHeight() < height){
             imageView.setLayoutY((height-image.getHeight())/2);
         }
